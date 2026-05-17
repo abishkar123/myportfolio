@@ -3,6 +3,12 @@
     height: 83vh;
     margin-bottom: 6rem;
   }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
   .about-containers {
     flex-wrap: wrap;
   }
@@ -20,6 +26,7 @@
     display: flex;
   }
   #experience,
+  #services,
   .experience-details-container {
     margin-top: 2rem;
   }
@@ -44,6 +51,9 @@
   }
   .about-containers {
     margin-top: 0;
+  }
+  #about .text-container {
+    padding: 1.25rem;
   }
 }
 
@@ -97,7 +107,50 @@
   .title {
     font-size: 2rem;
   }
+  .hero-summary {
+    font-size: 0.95rem;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-card {
+    padding: 1.25rem;
+  }
+  .project-card {
+    padding: 1rem;
+  }
+  .project-img {
+    height: 14rem;
+  }
+  .skills-card article {
+    width: 100%;
+  }
+  .contact-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contact-cta__buttons {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .contact-cta h2 {
+    font-size: 1.35rem;
+  }
   .text-container {
     text-align: justify;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

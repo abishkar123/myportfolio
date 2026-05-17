@@ -14,6 +14,7 @@
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
           <li><a href="#experience">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -30,7 +31,8 @@
         </div>
         <div class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
@@ -43,7 +45,15 @@
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Abishkar Rai</h1>
-        <p class="section__text__p2">Full Stack Developer</p>
+        <p class="section__text__p2">Full Stack Developer | AI Automation Specialist</p>
+        <p class="hero-summary">
+          I build modern web apps and AI-powered automations that help small businesses save time, capture leads, and follow up faster.
+        </p>
+        <div class="hero-badges">
+          <span>Web Apps</span>
+          <span>AI Automation</span>
+          <span>DevOps</span>
+        </div>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
@@ -51,8 +61,8 @@
           >
             Download CV
           </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
+          <button class="btn btn-color-1" onclick="location.href='./#services'">
+            View Services
           </button>
         </div>
         <div id="socials-container">
@@ -84,34 +94,85 @@
         </div>
         <div class="about-details-container">
           <div class="about-containers">
-            <div class="details-container">
+            <div class="details-container about-card">
               <img
                 src="./assets/experience.png"
                 alt="Experience icon"
                 class="icon"
               />
-              <h3>Experience</h3>
-              <p>2+ years <br />Full Stack Development</p>
+              <p class="about-card__label">Experience</p>
+              <h3>2+ years</h3>
+              <p>Building full-stack products, client work, and production-ready web apps.</p>
             </div>
-            <div class="details-container">
+            <div class="details-container about-card">
               <img
                 src="./assets/education.png"
                 alt="Education icon"
                 class="icon"
               />
-              <h3>Education</h3>
-              <p>B.IT. Bachelors Degree<br />BootCamp On Software Emginnering</p>
+              <p class="about-card__label">Education</p>
+              <h3>B.IT. Degree</h3>
+              <p>Software engineering training with a practical focus on modern delivery.</p>
             </div>
           </div>
           <div class="text-container">
             <p>
-              Highly skilled Full-Stack Developer at a leading Australian Real Estate and Business Fund management firm. Having completed my bachelor’s degree in information technology, I have learned how to design, build, maintain, and develop responsive web applications in the FinTech, EdTech, and Retail eCommerce Industry. 
-              <br/> <br/>
-              Proficient with JavaScript, TypeScript, React.js, RESTful API, AWS, and Node.js, with extensive knowledge of UX Component, Frameworks, and Serverless Architecture such as Lambda & S3. I am eager to continuously enhance my proficiency in cutting-edge technologies as I work towards achieving professional growth and delivering impactful results.
-
-             
+              I’m a full-stack developer who also builds AI automation systems for small businesses. My work sits at the intersection of product delivery, cloud infrastructure, and practical automation, so I can take ideas from concept to working workflow without unnecessary handoffs.
+              <br /><br />
+              I focus on useful outcomes: cleaner customer journeys, faster internal processes, and sites that look credible while still being easy to maintain. Outside client work, I’m building faceless content around AI, careers, and DevOps that teaches through real examples, not generic slides.
             </p>
           </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#services'"
+      />
+    </section>
+    <section id="services">
+      <p class="section__text__p1">What I Offer</p>
+      <h1 class="title">Services</h1>
+      <div class="services-grid">
+        <div class="service-card">
+          <p class="service-kicker">01</p>
+          <h3>AI Automation Setup</h3>
+          <p>
+            I help small businesses save 5-10 hours per week by automating customer enquiries, lead capture, and follow-up using AI.
+          </p>
+          <ul>
+            <li>Website FAQ chatbots</li>
+            <li>Google Sheets workflows</li>
+            <li>Invoice and email automation</li>
+            <li>Booking and lead capture</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <p class="service-kicker">02</p>
+          <h3>Web Apps &amp; DevOps</h3>
+          <p>
+            Modern front-end and back-end delivery for teams that need reliable web experiences and clean deployments.
+          </p>
+          <ul>
+            <li>React, Next.js, and Node.js builds</li>
+            <li>API and cloud integration</li>
+            <li>AWS and serverless delivery</li>
+            <li>CI/CD and deployment support</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <p class="service-kicker">03</p>
+          <h3>Faceless Tech Content</h3>
+          <p>
+            Screen-recorded, practical content around AI, career growth, and DevOps that teaches with real workflows instead of generic clips.
+          </p>
+          <ul>
+            <li>AI tools for job seekers</li>
+            <li>DevOps and Azure tutorials</li>
+            <li>GitHub Actions automation</li>
+            <li>Short-form and long-form scripts</li>
+          </ul>
         </div>
       </div>
       <img
@@ -124,9 +185,12 @@
     <section id="experience">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Skills</h1>
+      <p class="section-lead">
+        A practical stack for web delivery, automation, and reliable deployment.
+      </p>
       <div class="experience-details-container">
         <div class="about-containers">
-          <div class="details-container">
+          <div class="details-container skills-card">
             <h2 class="experience-sub-title">Client-Side</h2>
             <div class="article-container">
               <article>
@@ -251,7 +315,7 @@
 
             </div>
           </div>
-          <div class="details-container">
+          <div class="details-container skills-card">
             <h2 class="experience-sub-title">Server-Side</h2>
             <div class="article-container">
             
@@ -352,18 +416,30 @@
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
+      <p class="section-lead">
+        A few selected builds that show product thinking, end-to-end delivery, and practical deployment experience.
+      </p>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="article-container">
+            <img
+              src="./assets/project-1.png"
+              alt="Ecommerce project preview"
+              class="project-img"
+            />
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__eyebrow">Frontend / Ecommerce</p>
             <h2 class="experience-sub-title project-title">Ecommerce Project</h2>
-            <div class="btn-container">
+            <p class="project-card__text">
+              Customer-facing shopping experience built to support product discovery, trust, and a smooth buying flow.
+            </p>
+            <div class="project-tags">
+              <span>React</span>
+              <span>AWS</span>
+              <span>UI Delivery</span>
+            </div>
+            <div class="btn-container project-actions">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/abishkar123/client-cms-user'"
@@ -378,42 +454,28 @@
               </button>
             </div>
           </div>
-          <!-- <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">CMS Project</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/abishkar123/cms-client'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href=' https://tan-dizzy-whale.cyclic.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
+        </article>
 
-          </div> -->
-
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
+        <article class="project-card">
+          <div class="article-container">
+            <img
+              src="./assets/project-3.png"
+              alt="Library management project preview"
+              class="project-img"
+            />
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__eyebrow">API / Workflow</p>
+            <h2 class="experience-sub-title project-title">Library Management</h2>
+            <p class="project-card__text">
+              Backend-heavy system focused on structured data, repeatable processes, and clean service delivery.
+            </p>
+            <div class="project-tags">
+              <span>Node.js</span>
+              <span>MongoDB</span>
+              <span>API Design</span>
             </div>
-            <h2 class="experience-sub-title project-title">Library Mangaement</h2>
-            <div class="btn-container">
+            <div class="btn-container project-actions">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/abishkar123/libMangement-api'"
@@ -427,21 +489,29 @@
                 Live Demo
               </button>
             </div>
-
-            
-
           </div>
+        </article>
 
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-4.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
+        <article class="project-card">
+          <div class="article-container">
+            <img
+              src="./assets/project-4.png"
+              alt="Client project preview"
+              class="project-img"
+            />
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__eyebrow">Client Work</p>
             <h2 class="experience-sub-title project-title">Client Project</h2>
-            <div class="btn-container">
+            <p class="project-card__text">
+              Real-world delivery for a client-facing product with backend integration and cloud hosting.
+            </p>
+            <div class="project-tags">
+              <span>Node.js</span>
+              <span>Cloud</span>
+              <span>Client Delivery</span>
+            </div>
+            <div class="btn-container project-actions">
               <button
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/abishkar123/Bizvisison-backend'"
@@ -455,15 +525,8 @@
                 Live Demo
               </button>
             </div>
-
-            
-
           </div>
-
-          
-
-
-        </div>
+        </article>
       </div>
       <img
         src="./assets/arrow.png"
@@ -477,6 +540,23 @@
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
+      <p class="section-lead">
+        If you need a website, an automation setup, or a practical AI workflow, send a message and I’ll respond with the best next step.
+      </p>
+      <div class="contact-cta">
+        <div>
+          <p class="contact-cta__eyebrow">Available for</p>
+          <h2>Freelance builds, automation projects, and technical collaboration.</h2>
+        </div>
+        <div class="contact-cta__buttons">
+          <button class="btn btn-color-1" onclick="location.href='mailto:abishkarrai1997@gmail.com'">
+            Email Me
+          </button>
+          <button class="btn btn-color-2" onclick="location.href='https://www.linkedin.com/in/abishkar-rai/'">
+            LinkedIn
+          </button>
+        </div>
+      </div>
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
           <img
@@ -484,7 +564,7 @@
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
-          <p><a href="mailto:abishkarrai1997@gmail.com">abishakrrai1997@gmail.com</a></p>
+          <p><a href="mailto:abishkarrai1997@gmail.com">abishkarrai1997@gmail.com</a></p>
         </div>
         <div class="contact-info-container">
           <img
@@ -501,13 +581,14 @@
         <div class="nav-links-container">
           <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#experience">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169;Abishkar Rai 💟 . All Rights Reserved.</p>
+      <p>Copyright (c) Abishkar Rai. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
   </body>
