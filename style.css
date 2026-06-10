@@ -11,6 +11,29 @@
   --gradient: linear-gradient(135deg, #38bdf8, #818cf8);
   --radius: 16px;
   --shadow: 0 16px 40px rgba(2, 6, 23, 0.45);
+  --nav-bg: rgba(11, 17, 32, 0.8);
+  --icon-filter: invert(0.85);
+  --chip-bg: rgba(56, 189, 248, 0.1);
+  --glow-1: rgba(129, 140, 248, 0.14);
+  --glow-2: rgba(56, 189, 248, 0.1);
+}
+
+:root[data-theme="light"] {
+  --bg: #f4f7fb;
+  --bg-alt: #eef2f8;
+  --card: #ffffff;
+  --card-border: #dbe4f0;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --accent: #0284c7;
+  --accent-2: #6366f1;
+  --gradient: linear-gradient(135deg, #0284c7, #6366f1);
+  --shadow: 0 16px 40px rgba(15, 23, 42, 0.1);
+  --nav-bg: rgba(244, 247, 251, 0.85);
+  --icon-filter: none;
+  --chip-bg: rgba(2, 132, 199, 0.08);
+  --glow-1: rgba(99, 102, 241, 0.12);
+  --glow-2: rgba(2, 132, 199, 0.08);
 }
 
 * {
@@ -27,11 +50,12 @@ html {
 body {
   font-family: "Inter", system-ui, sans-serif;
   background:
-    radial-gradient(60rem 30rem at 85% -5%, rgba(129, 140, 248, 0.14), transparent 60%),
-    radial-gradient(50rem 28rem at -10% 40%, rgba(56, 189, 248, 0.1), transparent 60%),
+    radial-gradient(60rem 30rem at 85% -5%, var(--glow-1), transparent 60%),
+    radial-gradient(50rem 28rem at -10% 40%, var(--glow-2), transparent 60%),
     var(--bg);
   color: var(--text);
   line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3, .logo {
@@ -97,7 +121,7 @@ nav#hamburger-nav {
   align-items: center;
   gap: 2rem;
   padding: 1rem 2rem;
-  background: rgba(11, 17, 32, 0.8);
+  background: var(--nav-bg);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(36, 51, 83, 0.6);
 }
@@ -236,7 +260,7 @@ nav#hamburger-nav {
 }
 
 .btn-outline:hover {
-  background: rgba(56, 189, 248, 0.1);
+  background: var(--chip-bg);
   transform: translateY(-2px);
 }
 
@@ -291,7 +315,7 @@ nav#hamburger-nav {
   height: 2rem;
   width: 2rem;
   cursor: pointer;
-  filter: invert(0.85);
+  filter: var(--icon-filter);
   transition: transform 0.2s ease;
 }
 
@@ -357,7 +381,7 @@ nav#hamburger-nav {
 .about-card .icon {
   height: 2rem;
   margin: 0 auto 0.5rem;
-  filter: invert(0.85);
+  filter: var(--icon-filter);
 }
 
 .about-card p {
@@ -480,7 +504,7 @@ nav#hamburger-nav {
 }
 
 .chips span {
-  background: rgba(56, 189, 248, 0.1);
+  background: var(--chip-bg);
   border: 1px solid rgba(56, 189, 248, 0.25);
   color: var(--text);
   font-size: 0.8rem;
@@ -577,7 +601,7 @@ nav#hamburger-nav {
 
 .contact-card .icon {
   height: 1.4rem;
-  filter: invert(0.85);
+  filter: var(--icon-filter);
 }
 
 .contact-emoji {
@@ -592,4 +616,82 @@ footer {
   font-size: 0.9rem;
   border-top: 1px solid rgba(36, 51, 83, 0.6);
   margin-top: 4rem;
+}
+
+/* ============ Nav actions & theme toggle ============ */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.theme-toggle {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 50%;
+  width: 2.4rem;
+  height: 2.4rem;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px) rotate(15deg);
+  border-color: var(--accent);
+}
+
+/* ============ Typing caret ============ */
+.caret {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  margin-left: 4px;
+  vertical-align: -0.1em;
+  background: var(--accent);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* ============ Scroll progress bar ============ */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: var(--gradient);
+  z-index: 60;
+}
+
+/* ============ Back to top ============ */
+#back-to-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+  background: var(--gradient);
+  color: #0b1120;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 40;
+}
+
+#back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
 }

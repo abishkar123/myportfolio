@@ -16,6 +16,10 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem("theme") || "dark";
+    </script>
   </head>
   <body>
     <nav id="desktop-nav">
@@ -27,12 +31,17 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a class="btn btn-small btn-outline" href="./assets/resume.pdf" target="_blank">Resume</a>
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle color theme" onclick="toggleTheme()">🌙</button>
+        <a class="btn btn-small btn-outline" href="./assets/resume.pdf" target="_blank">Resume</a>
+      </div>
     </nav>
 
     <nav id="hamburger-nav">
       <a href="#home" class="logo">abishkar<span>.rai</span></a>
-      <div class="hamburger-menu">
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle color theme" onclick="toggleTheme()">🌙</button>
+        <div class="hamburger-menu">
         <button class="hamburger-icon" aria-label="Toggle menu" onclick="toggleMenu()">
           <span></span>
           <span></span>
@@ -46,6 +55,7 @@
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
           <li><a href="./assets/resume.pdf" target="_blank" onclick="toggleMenu()">Resume</a></li>
         </ul>
+        </div>
       </div>
     </nav>
 
@@ -54,7 +64,7 @@
         <div class="hero-copy reveal">
           <p class="eyebrow">Hi, my name is</p>
           <h1>Abishkar Rai.</h1>
-          <h2>I build full-stack, cloud &amp; AI-powered applications.</h2>
+          <h2>I build <span id="typed"></span><span class="caret"></span></h2>
           <p class="hero-summary">
             Software Engineer based in Sydney with experience delivering
             high-performance web applications using modern JavaScript frameworks,
@@ -322,6 +332,9 @@
       <p>Designed &amp; built by Abishkar Rai · Sydney, NSW</p>
       <p>© <span id="year"></span> Abishkar Rai. All rights reserved.</p>
     </footer>
+
+    <div id="scroll-progress"></div>
+    <button id="back-to-top" aria-label="Back to top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</button>
 
     <script src="script.js"></script>
   </body>
