@@ -81,15 +81,51 @@ export const skills = [
     group: "Testing & Tools",
     items: ["Jest", "React Testing Library", "Git", "Webpack", "Cursor AI"],
   },
+  {
+    group: "AI Tools & IDEs",
+    items: ["Claude Code", "Copilot", "Codex", "Cursor AI"],
+  },
 ];
 
 export const projects = [
+  {
+    title: "MortgageIQ Agent Swarm",
+    description:
+      "Multi-agent AI system using Mastra framework with supervisor pattern, role-based agents, compliance gating, and human-in-the-loop workflows. Demonstrates advanced architectural patterns for agentic AI systems with evaluation harnesses and CI gates.",
+    image: "/assets/project-1.png",
+    tags: ["TypeScript", "AI Agents", "Mastra", "Claude 3.5 Sonnet", "Llama 3.1", "Compliance"],
+    links: [
+      { label: "GitHub", href: "https://github.com/abishkar123/agentic-agent-MortgageIQ" },
+    ],
+  },
+  {
+    title: "AI Video Compliance",
+    description:
+      "End-to-end AI system for video compliance detection and analysis. Full-stack implementation with TypeScript frontend/backend and Python processing pipeline for automated compliance checking.",
+    image: "/assets/project-2.png",
+    tags: ["TypeScript", "Python", "AI", "Claude API", "Video Processing"],
+    links: [
+      { label: "Frontend", href: "https://github.com/abishkar123/AI-Video-compliance-frontend" },
+      { label: "Backend", href: "https://github.com/abishkar123/AI-Video-compliance-backend" },
+      { label: "Core", href: "https://github.com/abishkar123/AI-Video-compliance" },
+    ],
+  },
+  {
+    title: "Productivity Coach Agent",
+    description:
+      "An AI-powered productivity coaching agent that helps users optimize their workflows and achieve goals. Built with modern AI agent patterns for intelligent task management and personalized recommendations.",
+    image: "/assets/project-3.png",
+    tags: ["TypeScript", "AI Agents", "Claude API", "LLM"],
+    links: [
+      { label: "GitHub", href: "https://github.com/abishkar123/Productivity-coach-agent-" },
+    ],
+  },
   {
     title: "Resume Optimization AI",
     description:
       "AI-powered application that optimizes resumes using custom prompts and real data references. Built with React, Node.js, LangChain, OpenAI models, and AWS S3.",
     image: "/assets/project-1.png",
-    tags: ["React", "Node.js", "LangChain", "AWS"],
+    tags: ["React", "Node.js", "LangChain", "GPT-4", "AWS"],
     links: [
       { label: "Frontend", href: "https://github.com/abishkar123/resume-optimizaton-client" },
       { label: "API", href: "https://github.com/abishkar123/Resume-optimization-api" },
@@ -100,7 +136,7 @@ export const projects = [
     description:
       "An AI agent that extracts and converts text from images using LLMs, LangChain, and AWS — exposed as a clean API with a simple frontend.",
     image: "/assets/project-2.png",
-    tags: ["JavaScript", "LangChain", "AWS", "AI"],
+    tags: ["JavaScript", "LangChain", "GPT-4 Vision", "AWS", "AI"],
     links: [
       { label: "API", href: "https://github.com/abishkar123/image-to-text.ai-api" },
       { label: "Frontend", href: "https://github.com/abishkar123/-Image-Text-AI" },

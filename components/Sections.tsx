@@ -86,13 +86,9 @@ export function About() {
       <SectionHeading eyebrow="Get To Know More" title="About Me" />
       <div className="flex flex-col items-center gap-12 lg:flex-row">
         <Reveal className="shrink-0">
-          <Image
-            src="/assets/about-pic.png"
-            alt="Abishkar Rai"
-            width={320}
-            height={320}
-            className="rounded-2xl shadow-2xl"
-          />
+          <div className="flex h-80 w-80 items-center justify-center rounded-2xl bg-gradient-to-br from-accent to-accent-2 shadow-2xl">
+            <span className="font-display text-7xl font-bold text-[#0a0f0d]">AR</span>
+          </div>
         </Reveal>
         <Reveal delay={120}>
           <div className="space-y-4 text-ink-muted">
@@ -197,13 +193,6 @@ export function Projects() {
         {projects.map((project, i) => (
           <Reveal key={project.title} delay={i * 100}>
             <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-edge bg-surface transition hover:-translate-y-1.5 hover:border-accent">
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={640}
-                height={400}
-                className="h-48 w-full object-cover"
-              />
               <div className="flex flex-1 flex-col gap-4 p-6">
                 <h3 className="font-display text-lg font-semibold">{project.title}</h3>
                 <p className="flex-1 text-sm text-ink-muted">{project.description}</p>
